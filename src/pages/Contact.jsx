@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import axios from 'axios';
 
 const socials = [
   {
@@ -64,17 +65,18 @@ export default function Contact() {
 
     setStatus('sending');
 
-    const res = await fetch('https://portfolio-backend-l5qy.onrender.com/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form),
-    });
-
-    const data = await res.json();
+    const { data } = await axios.post(
+      'https://portfolio-backend-l5qy.onrender.com/send-email',
+      form,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     if (data.success) {
+
       setStatus('sent');
 
       setForm({
@@ -85,17 +87,29 @@ export default function Contact() {
       });
 
     } else {
+
       setStatus('idle');
+
       alert('Failed to send message');
     }
 
   } catch (error) {
 
-    console.log(error);
+    console.log('AXIOS ERROR:', error);
 
     setStatus('idle');
 
-    alert('Something went wrong');
+    // backend error
+    if (error.response) {
+
+      console.log(error.response.data);
+
+      alert(error.response.data.message || 'Server Error');
+
+    } else {
+
+      alert('Network Error');
+    }
   }
 };
 
