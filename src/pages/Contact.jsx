@@ -64,7 +64,7 @@ export default function Contact() {
     setStatus("sending");
 
     const { data } = await axios.post(
-  "https://your-backend.vercel.app/api/contact",
+  "https://portfolio-backend-gilt-eta.vercel.app/api/contact",
   form
 );
 
