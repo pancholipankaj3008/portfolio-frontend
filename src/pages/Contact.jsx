@@ -68,11 +68,12 @@ export default function Contact() {
     const { data } = await axios.post(
       'https://portfolio-backend-l5qy.onrender.com/send-email',
       form,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
+       {
+    withCredentials: true,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
     );
 
     if (data.success) {
