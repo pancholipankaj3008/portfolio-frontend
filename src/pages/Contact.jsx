@@ -66,7 +66,7 @@ export default function Contact() {
     setStatus('sending');
 
     const { data } = await axios.post(
-      'https://portfolio-backend-l5qy.onrender.com/send-email',
+      'https://portfolio-backend-stw7.onrender.com/send-email',
       form,
        {
     withCredentials: true,
