@@ -65,15 +65,8 @@ export default function Contact() {
 
     setStatus('sending');
 
-    const { data } = await axios.post(
-      'https://portfolio-backend-stw7.onrender.com/send-email',
-      form,
-       {
-    withCredentials: true,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }
+   const response = await axios.post(
+      "https://portfolio-backend-nsw7.onrender.com/api/contact",form
     );
 
     if (data.success) {
