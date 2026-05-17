@@ -56,53 +56,43 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e) => {
-
   e.preventDefault();
 
   if (!form.name || !form.email || !form.message) return;
 
   try {
+    setStatus("sending");
 
-    setStatus('sending');
-
-   const response = await axios.post(
-      "https://portfolio-backend-nsw7.onrender.com/",form
-    );
+    const { data } = await axios.post(
+  "https://your-backend.vercel.app/api/contact",
+  form
+);
 
     if (data.success) {
-
-      setStatus('sent');
+      setStatus("sent");
 
       setForm({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
-
     } else {
+      setStatus("idle");
 
-      setStatus('idle');
-
-      alert('Failed to send message');
+      alert("Failed to send message");
     }
-
   } catch (error) {
+    console.log("AXIOS ERROR:", error);
 
-    console.log('AXIOS ERROR:', error);
+    setStatus("idle");
 
-    setStatus('idle');
-
-    // backend error
     if (error.response) {
-
       console.log(error.response.data);
 
-      alert(error.response.data.message || 'Server Error');
-
+      alert(error.response.data.message || "Server Error");
     } else {
-
-      alert('Network Error');
+      alert("Network Error");
     }
   }
 };
