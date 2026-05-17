@@ -66,7 +66,7 @@ export default function Contact() {
     setStatus('sending');
 
    const response = await axios.post(
-      "https://portfolio-backend-nsw7.onrender.com/api/contact",form
+      "https://portfolio-backend-nsw7.onrender.com/",form
     );
 
     if (data.success) {
