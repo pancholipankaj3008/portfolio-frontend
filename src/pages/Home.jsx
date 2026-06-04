@@ -1,4 +1,3 @@
-import React from 'react';
 import './Home.css';
 
 export default function Home() {
@@ -41,10 +40,6 @@ export default function Home() {
         </div>
 
         <div className="hero-stats fade-up d4">
-          {/* <div className="stat">
-            <span className="stat-num">3+</span>
-            <span className="stat-label">Projects Built</span>
-          </div> */}
           <div className="stat-divider" />
           <div className="stat">
             <span className="stat-num">MERN</span>

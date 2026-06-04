@@ -13,8 +13,10 @@
   overflow: hidden;
   border: 3px solid rgba(127,255,180,0.3);
   box-shadow: 0 0 0 8px rgba(127,255,180,0.05);
+  animation: floatSoft 6.5s ease-in-out infinite;
 }
-.profile-img { width: 100%; height: 100%; object-fit: cover; }
+.profile-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s ease; }
+.profile-frame:hover .profile-img { transform: scale(1.06); }
 .profile-glow {
   position: absolute;
   inset: 0;
@@ -79,6 +81,7 @@
 .highlight-card:hover {
   border-color: rgba(127,255,180,0.2);
   transform: translateY(-2px);
+  background: rgba(24,24,31,0.9);
 }
 .hi-dot {
   width: 7px; height: 7px;

@@ -1,4 +1,3 @@
-import React from 'react';
 import profileImg from '../assets/profile.jpeg';
 import './About.css';
 
@@ -28,25 +27,11 @@ export default function About() {
               <span className="badge-dot" />
               <span>Open to Work</span>
             </div>
-              {/* <div className="profile-info-card">
-                <div className="pi-row">
-                  <span className="pi-label">Location</span>
-                  <span className="pi-value">Bharuch, Gujarat 🇮🇳</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Role</span>
-                  <span className="pi-value">MERN Stack Developer</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Email</span>
-                  <span className="pi-value" style={{color:'#5ae4ff', fontSize:'0.78rem'}}>pancholipankaj3008@gmail.com</span>
-                </div>
-              </div> */}
           </div>
 
           <div className="about-text-col fade-up d3">
             <p className="about-para">
-              I'm a <strong>MERN Stack Developer</strong> from Bharuch, Gujarat, India — passionate about building
+              I'm a <strong>MERN Stack Developer</strong> from Bharuch, Gujarat, India - passionate about building
               real-world web applications that are scalable, clean, and performant.
             </p>
             <p className="about-para">
@@ -55,14 +40,14 @@ export default function About() {
               On the frontend, I craft responsive, modern UIs using React.js and Tailwind CSS.
             </p>
             <p className="about-para">
-              I believe in writing clean, maintainable code and finishing what I start —
+              I believe in writing clean, maintainable code and finishing what I start -
               always before the deadline. Currently pursuing my <strong>BCA from Dr. Babasaheb Ambedkar Open
               University</strong> (graduating 2026), and actively seeking opportunities to grow as a full-stack developer.
             </p>
 
             <div className="highlights-grid">
-              {highlights.map((h, i) => (
-                <div className="highlight-card" key={i}>
+              {highlights.map((h) => (
+                <div className="highlight-card" key={h.title}>
                   <div className="hi-dot" />
                   <div>
                     <strong>{h.title}</strong>

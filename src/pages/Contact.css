@@ -12,7 +12,7 @@
   border-radius: 12px; padding: 0.9rem 1.1rem;
   text-decoration: none; transition: all 0.2s;
 }
-.social-chip:hover { border-color: rgba(90,228,255,0.2); transform: translateX(3px); }
+.social-chip:hover { border-color: rgba(90,228,255,0.2); transform: translateX(4px); background: rgba(24,24,31,0.86); }
 .chip-icon {
   display: flex; align-items: center; justify-content: center;
   width: 36px; height: 36px; border-radius: 9px;
@@ -26,6 +26,12 @@
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 20px;
   padding: 2rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.contact-form-wrap:hover {
+  border-color: rgba(127,255,180,0.18);
+  box-shadow: 0 18px 42px rgba(0,0,0,0.22);
+  transform: translateY(-3px);
 }
 .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -47,7 +53,10 @@
 .form-group input::placeholder,
 .form-group textarea::placeholder { color: rgba(136,136,145,0.5); }
 .form-group input:focus,
-.form-group textarea:focus { border-color: rgba(127,255,180,0.3); }
+.form-group textarea:focus {
+  border-color: rgba(127,255,180,0.3);
+  box-shadow: 0 0 0 3px rgba(127,255,180,0.06);
+}
 .submit-btn { align-self: flex-start; min-width: 160px; justify-content: center; }
 .submit-btn.loading { opacity: 0.7; cursor: not-allowed; }
 .spinner {
