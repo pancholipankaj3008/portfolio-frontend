@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pankaj-portfolio-woad-three.vercel.app/sitemap.xml
