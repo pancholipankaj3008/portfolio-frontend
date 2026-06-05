@@ -7,7 +7,7 @@ const categories = [
     title: 'Frontend',
     desc: 'Modern responsive interfaces with smooth user experiences.',
     level: 88,
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Tailwind CSS', 'Responsive UI'],
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Redux Toolkit' ,'Tailwind CSS', 'Responsive UI'],
   },
   {
     icon: 'BE',
@@ -31,7 +31,7 @@ const categories = [
     title: 'Cloud & Media',
     desc: 'Cloud uploads, media storage, and file workflows.',
     level: 78,
-    skills: ['Cloudinary', 'Media Uploads', 'File Handling'],
+    skills: ['Cloudinary', 'Media Uploads', 'Vercel' , 'Render' , 'File Handling'],
   },
   {
     icon: 'TL',
