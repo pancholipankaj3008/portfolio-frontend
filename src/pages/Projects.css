@@ -39,7 +39,7 @@
 
 .project-card:hover::before {
   opacity: 1;
-  transform: translateX(25%);
+  transform: translateX(0%);
 }
 
 .project-card.featured {

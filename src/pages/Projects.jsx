@@ -2,6 +2,7 @@ import './Projects.css';
 import sunelitePreview from '../assets/SunElite Pharma.png';
 import tkPreview from '../assets/TK.png';
 import weatherPreview from '../assets/Weather App.png';
+import nextgenPreview from '../assets/nextgen.png';
 
 const GithubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -18,55 +19,120 @@ const ExternalIcon = () => (
 );
 
 const projects = [
-  
+
   {
-  status: 'done',
-  statusLabel: 'Completed - Freelance',
-  featured: false,
-  name: 'TK Photography Platform',
-  desc: 'Built a full-stack photography platform with React.js, Node.js, Express.js, and MongoDB. Developed responsive frontend interfaces, integrated REST APIs, implemented JWT authentication, and collaborated using Git & GitHub.',
-  stack: [
-    'React.js','Tailwind' ,'Responsive UI', 'React Hooks', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
-  backendGithub: 'https://github.com/patel-Jishan/tk-backend.git',
-  frontendGithub: 'https://github.com/devspheretech01-dotcom/tkmomentscapture.git',
-  live: 'https://www.tkmomentscapture.com',
-  image: tkPreview,
-  imageAlt: 'TK Moments Capture website preview',
-},
+    status: 'done',
+    statusLabel: 'Completed - Full Stack',
+    featured: true,
+
+    name: 'NextGen E-Commerce',
+
+    desc: 'A full-stack MERN clothing e-commerce platform featuring JWT authentication, role-based admin dashboard, product & inventory management, cart, wishlist, orders, coupons, analytics, and Cloudinary integration with a responsive user experience.',
+
+    stack: [
+      'React.js',
+      'Redux Toolkit',
+      'Tailwind CSS',
+      'Responsive UI',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+      'Cloudinary',
+      'REST API'
+    ],
+
+    github: 'https://github.com/pancholipankaj3008/NextGen-E-Commerce',
+
+    live: 'https://nextgen-ecommerce-one.vercel.app',
+
+    image: nextgenPreview,
+
+    imageAlt: 'NextGen E-Commerce website preview',
+  },
+
   {
     status: 'done',
     statusLabel: 'Completed - Freelance',
     featured: false,
+
+    name: 'TK Photography Platform',
+
+    desc: 'A full-stack MERN wedding photography booking platform for a real client with online service booking, photographer assignment, booking management, payment tracking, PDF invoices, and automated email notifications.',
+
+    stack: [
+      'React.js',
+      'Tailwind CSS',
+      'Responsive UI',
+      'React Hooks',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT'
+    ],
+
+    github: 'https://github.com/pancholipankaj3008/Weddings-Booking-Management-System.git',
+
+    live: 'https://www.tkmomentscapture.com',
+
+    image: tkPreview,
+
+    imageAlt: 'TK Moments Capture website preview',
+  },
+
+  {
+    status: 'done',
+    statusLabel: 'Completed - Freelance',
+    featured: false,
+
     name: 'Sunelite Pharma',
-    desc: 'A professional pharmaceutical website focused on clear product presentation, company credibility, responsive layouts, and a clean user experience for visitors across devices.',
-    stack: ['React.js','Tailwind' ,'Responsive UI', 'React Hooks', 'Firebase' , 'authentication' , 'Cloudinary'],
-    github: 'https://github.com/devspheretech01-dotcom/SunElitePharma',
+
+    desc: 'A responsive pharmaceutical product showcase website developed for a real client using React.js, Firebase, and Cloudinary, featuring product management, inquiry forms, secure admin access, and email integration.',
+
+    stack: [
+      'React.js',
+      'Tailwind CSS',
+      'Responsive UI',
+      'React Hooks',
+      'Firebase',
+      'Authentication',
+      'Cloudinary'
+    ],
+
+    github: 'https://github.com/pancholipankaj3008/Medicine-Export.git',
+
     live: 'https://sunelitepharma.com',
+
     image: sunelitePreview,
+
     imageAlt: 'Sunelite Pharma website preview',
   },
+
   {
     status: 'done',
     statusLabel: 'Completed',
     featured: false,
+
     name: 'Weather Application',
-    desc: 'A responsive Weather App built with React.js and Weather API integration. Displays real-time weather including temperature, humidity, wind speed, and conditions based on user search. Uses React Hooks (useState, useEffect) for state management with dynamic UI updates.',
-    stack: ['React.js', 'Weather API', 'React Hooks', 'Responsive Design'],
+
+    desc: 'A responsive weather application built with React.js and Weather API integration that displays real-time weather information including temperature, humidity, wind speed, and weather conditions.',
+
+    stack: [
+      'React.js',
+      'Weather API',
+      'React Hooks',
+      'Responsive Design'
+    ],
+
     github: 'https://github.com/pancholipankaj3008/Weather-App-.git',
+
     live: 'https://weather-app-sigma-five-80.vercel.app/',
+
     image: weatherPreview,
+
     imageAlt: 'Weather Application live preview',
-  },
-  {
-    status: 'wip',
-    statusLabel: 'In Progress',
-    featured: true,
-    name: 'NextGen E-Commerce',
-    desc: 'A scalable clothing brand e-commerce platform built with the MERN stack. Backend fully completed with JWT authentication, RBAC authorization, product & inventory management, admin APIs, Cloudinary integration, and analytics APIs. Frontend with React.js is currently in progress.',
-    stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Cloudinary'],
-    github: 'https://github.com/pancholipankaj3008/NextGen-E-Commerce',
-    imageAlt: 'NextGen E-Commerce project preview',
   }
+
 ];
 
 export default function Projects() {
@@ -167,4 +233,5 @@ export default function Projects() {
       </div>
     </section>
   );
+
 }
