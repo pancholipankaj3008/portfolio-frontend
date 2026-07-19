@@ -3,6 +3,7 @@ import sunelitePreview from '../assets/SunElite Pharma.png';
 import tkPreview from '../assets/TK.png';
 import weatherPreview from '../assets/Weather App.png';
 import nextgenPreview from '../assets/nextgen.png';
+import aiResumePreview from "../assets/ai-resume-builder.png";
 
 const GithubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -52,8 +53,40 @@ const projects = [
   },
 
   {
+  status: "done",
+  statusLabel: "Completed - AI Powered",
+  featured: true,
+
+  name: "AI Resume Builder",
+
+  desc: "A full-stack AI-powered Resume Builder built with the MERN stack and Google Gemini AI. Users can create professional ATS-friendly resumes using AI assistance, choose from multiple modern templates, manage resumes securely with JWT authentication, and export high-quality PDFs with preserved hyperlinks using Puppeteer.",
+
+  stack: [
+    "React.js",
+    "Redux Toolkit",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Google Gemini AI",
+    "Puppeteer",
+    "REST API"
+  ],
+
+  github: "https://github.com/pancholipankaj3008/AI-Powered-Resume-Builder.git",
+
+
+  live: "https://ai-powered-resume-builder-three.vercel.app",
+
+  image: aiResumePreview,
+
+  imageAlt: "AI Resume Builder Preview",
+},
+
+  {
     status: 'done',
-    statusLabel: 'Completed - Freelance',
+    statusLabel: 'Completed',
     featured: false,
 
     name: 'TK Photography Platform',
